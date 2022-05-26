@@ -14,3 +14,9 @@ target_link_libraries(syrok m)
 target_include_directories (syrok PUBLIC "deps/stb")
 
 add_subdirectory ("syrokcli")
+
+install(TARGETS syrok
+        RUNTIME DESTINATION bin
+        LIBRARY DESTINATION lib)
+install(FILES include/syrok.h
+        DESTINATION include)
